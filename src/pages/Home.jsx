@@ -10,10 +10,20 @@ export default function Home() {
 
   return (
     <>
-      <div className="hero text-white text-center p-5 mb-5" style={{ backgroundImage: 'url(https://source.unsplash.com/1600x400/?shopping)', backgroundSize: 'cover' }}>
-        <h1 className="display-4 fw-bold">Bienvenido a Mi Tienda</h1>
-        <p className="lead">Los mejores productos al mejor precio</p>
-      </div>
+    <div
+        className="hero text-black text-center p-5 mb-5"
+        style={{
+        backgroundImage: 'url(https://i.pinimg.com/736x/84/68/cd/8468cdd48ba8b0e90e12051bb2a97891.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+         width: '100%',
+         height: '300px'
+        }}
+>
+        <h1 className="display-4 fw-bold">Bienvenido a mi Tienda</h1>
+         <p className="lead">Los mejores productos, al mejor precio</p>
+        
+    </div>
 
       <div className="container">
         <h2 className="mb-4">Productos Destacados</h2>
