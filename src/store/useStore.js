@@ -4,7 +4,7 @@ export const useStore = create((set) => ({
   carrito: [],
   agregarAlCarrito: (producto) =>
     set((state) => ({
-      carrito: [state.carrito, producto]
+      carrito: [...state.carrito, producto] 
     })),
   eliminarDelCarrito: (id) =>
     set((state) => ({

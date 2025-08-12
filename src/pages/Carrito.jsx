@@ -1,13 +1,14 @@
 import { useStore } from '../store/useStore';
 
 export default function Carrito() {
-  const { carrito, eliminarDelCarrito } = useStore();
+  const { carrito, eliminarDelCarrito, limpiarCarrito } = useStore();
 
   const total = carrito.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
     <div>
       <h2>Carrito de Compras</h2>
+
       {carrito.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
@@ -26,7 +27,10 @@ export default function Carrito() {
                   <td>{item.title.slice(0, 30)}...</td>
                   <td>${item.price}</td>
                   <td>
-                    <button className="btn btn-danger btn-sm" onClick={() => eliminarDelCarrito(item.id)}>
+                    <button
+                      className="btn btn-danger btn-sm"
+                      onClick={() => eliminarDelCarrito(item.id)}
+                    >
                       Eliminar
                     </button>
                   </td>
@@ -38,21 +42,20 @@ export default function Carrito() {
               </tr>
             </tbody>
           </table>
+
+          {carrito.length > 0 && (
+            <button
+              className="btn btn-primary mt-3"
+              onClick={() => {
+                alert('Gracias por tu compra 🎉');
+                limpiarCarrito();
+              }}
+            >
+              Pagar
+            </button>
+          )}
         </div>
       )}
     </div>
   );
-
-  {carrito.length > 0 && (
-  <button
-    className="btn btn-primary mt-3"
-    onClick={() => {
-      alert('Gracias por tu compra 🎉');
-      useStore.getState().limpiarCarrito();
-    }}
-  >
-    Pagar
-  </button>
-)}
-
 }
