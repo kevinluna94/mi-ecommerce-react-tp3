@@ -47,7 +47,7 @@ export default function Carrito() {
             <button
               className="btn btn-primary mt-3"
               onClick={() => {
-                alert('Gracias por tu compra 🎉');
+                alert('Gracias por tu compra');
                 limpiarCarrito();
               }}
             >
