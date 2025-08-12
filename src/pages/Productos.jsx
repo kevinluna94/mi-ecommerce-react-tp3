@@ -19,7 +19,7 @@ export default function Productos() {
             <div className="card h-100">
               <img src={p.image} className="card-img-top p-3" style={{ height: '200px', objectFit: 'contain' }} />
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{p.title.slice(0, 30)}...</h5>
+                <h5 className="card-title">{p.title.slice(0, 30)}</h5>
                 <p className="card-text fw-bold">${p.price}</p>
                 <button onClick={() => agregarAlCarrito(p)} className="btn btn-success mt-auto">
                   Agregar al carrito

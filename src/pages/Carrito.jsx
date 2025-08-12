@@ -42,4 +42,17 @@ export default function Carrito() {
       )}
     </div>
   );
+
+  {carrito.length > 0 && (
+  <button
+    className="btn btn-primary mt-3"
+    onClick={() => {
+      alert('Gracias por tu compra 🎉');
+      useStore.getState().limpiarCarrito();
+    }}
+  >
+    Pagar
+  </button>
+)}
+
 }
