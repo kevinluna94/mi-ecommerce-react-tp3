@@ -1,7 +1,9 @@
 import { useStore } from '../store/useStore';
 
 export default function Carrito() {
-  const { carrito, eliminarDelCarrito, limpiarCarrito } = useStore();
+  const carrito = useStore((state) => state.carrito);
+  const eliminarDelCarrito = useStore((state) => state.eliminarDelCarrito);
+  const limpiarCarrito = useStore((state) => state.limpiarCarrito);
 
   const total = carrito.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
@@ -37,8 +39,12 @@ export default function Carrito() {
                 </tr>
               ))}
               <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>${total}</strong></td>
+                <td>
+                  <strong>Total</strong>
+                </td>
+                <td>
+                  <strong>${total}</strong>
+                </td>
               </tr>
             </tbody>
           </table>
