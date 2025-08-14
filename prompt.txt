@@ -1,0 +1,1 @@
+si tengo que hacer un video explicando al profesor de mi trabajo en un video de 5 minutos como puedo explicarle de manera simple explicando las librerias que use para este proyecto, la funcionalidad de cada carpeta, la api, zustand store como puedo explicarlo
